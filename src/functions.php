@@ -1,6 +1,7 @@
 <?php
 use AsciiSoup\Hamcrest\CallbackMatcher;
 use Assert\Assertion;
+use Garethellis\HamcrestMatchers\Matcher\ArrayValuesMatcher;
 use Garethellis\HamcrestMatchers\Matcher\HtmlMatcher;
 use Garethellis\HamcrestMatchers\Matcher\UuidMatcher;
 
@@ -32,5 +33,12 @@ if (!function_exists("anArrayOfUUIDs")) {
                 }
             )
         );
+    }
+}
+
+if (!function_exists("hasEqualValuesTo")) {
+    function hasEqualValuesTo($array)
+    {
+        return new ArrayValuesMatcher($array);
     }
 }
