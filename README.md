@@ -36,6 +36,13 @@ Matches a string containing HTML. Example usage;
 assertThat($html, containsHTML());
 ```
 
+### Array values matcher
+
+Match the values of an array or `Traversable` instance. Note - ignores keys.
+```php
+assertThat($aTraversableInstance, hasEqualValuesTo($anArray));
+```
+
 ### Callback Matcher
 
 Callback matching is achieved thanks to [Nils Luxton](https://github.com/ascii-soup/hamcrest-callback-matcher) and his
