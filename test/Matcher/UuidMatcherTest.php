@@ -11,4 +11,10 @@ class UuidMatcherTest extends \PHPUnit_Framework_TestCase
         $faker = Factory::create();
         assertThat($faker->uuid, is(aUUID()));
     }
+
+    public function testArrayOfUuidMatcher()
+    {
+        $faker = Factory::create();
+        assertThat([$faker->uuid, $faker->uuid, $faker->uuid], is(anArrayOfUUIDs()));
+    }
 }
