@@ -22,7 +22,6 @@ class ArrayValuesMatcherTest extends \PHPUnit_Framework_TestCase
     {
         $expected = "foo";
         $actual = new \ArrayObject([1 => "foo", 3 => "bar", 4 => "baz"]);
-        $this->expectException(\InvalidArgumentException::class);
-        assertThat($actual, hasEqualValuesTo($expected));
+        assertThat($actual, not(hasEqualValuesTo($expected)));
     }
 }

@@ -4,6 +4,7 @@ namespace Garethellis\HamcrestMatchers\Matcher;
 
 use Hamcrest\BaseMatcher;
 use Hamcrest\Description;
+use InvalidArgumentException;
 
 class ArrayValuesMatcher extends BaseMatcher
 {
@@ -18,13 +19,17 @@ class ArrayValuesMatcher extends BaseMatcher
      */
     public function __construct($array)
     {
-        $this->assertArrayLike($array);
         $this->expected = $array;
     }
 
     public function matches($actual)
     {
-        $this->assertArraylike($actual);
+        try {
+            $this->assertArrayLike($actual);
+            $this->assertArrayLike($this->expected);
+        } catch (InvalidArgumentException $e) {
+            return false;
+        }
         return $this->getValues($actual) === $this->getValues($this->expected);
     }
 
@@ -44,7 +49,7 @@ class ArrayValuesMatcher extends BaseMatcher
     protected function assertArrayLike($array)
     {
         if (!is_array($array) && !$array instanceof \Traversable) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 "Argument passed to ArrayValuesMatcher must be an array or an instance of Traversable"
             );
         }
