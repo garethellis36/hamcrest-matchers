@@ -1,3 +1,11 @@
+# 0.4 [2016-03-23]
+  * Bug fix: `ArrayValuesMatcher` previously threw `InvalidArgumentException` if you tried to use it with a 
+  non-array-like structure. Now it will just fail the match instead.
+  * Possibly breaking bug fix: `anArrayOfUUIDs` will now fail the match if an empty array is passed in
+  * Bug fix: `anArrayOfUUIDs` will now handle `InvalidArgumentException` thrown by `Assertion::uuid()` library so that 
+  Hamcrest can properly handle the failed match
+  
+  
 # 0.3 [2016-03-18]
   * Array values matcher (`hasValuesEqualTo`)
 
