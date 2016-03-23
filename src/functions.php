@@ -1,6 +1,7 @@
 <?php
 use AsciiSoup\Hamcrest\CallbackMatcher;
 use Assert\Assertion;
+use Assert\InvalidArgumentException;
 use Garethellis\HamcrestMatchers\Matcher\ArrayValuesMatcher;
 use Garethellis\HamcrestMatchers\Matcher\HtmlMatcher;
 use Garethellis\HamcrestMatchers\Matcher\UuidMatcher;
@@ -32,7 +33,11 @@ if (!function_exists("anArrayOfUUIDs")) {
                     }
                     
                     foreach ($array as $value) {
-                        Assertion::uuid($value);
+                        try {
+                            Assertion::uuid($value);
+                        } catch (InvalidArgumentException $e) {
+                            return false;
+                        }
                     }
                     return true;
                 }

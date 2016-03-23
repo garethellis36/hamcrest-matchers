@@ -3,6 +3,7 @@
 namespace Garethellis\HamcrestMatchers\Test\Matcher;
 
 use Faker\Factory;
+use Hamcrest\AssertionError;
 
 class UuidMatcherTest extends \PHPUnit_Framework_TestCase
 {
@@ -21,5 +22,11 @@ class UuidMatcherTest extends \PHPUnit_Framework_TestCase
     public function testArrayOfUuidMatcherDoesntMatchAnEmptyArray()
     {
         assertThat([], is(not(anArrayOfUUIDs())));
+    }
+    
+    public function testArrayOfUuidMatcherShouldThrowAHamcrestExceptionIfMatcherFails()
+    {
+        $this->expectException(AssertionError::class);
+        assertThat(["foo"], is(anArrayOfUUIDs()));
     }
 }
