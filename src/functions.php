@@ -26,6 +26,11 @@ if (!function_exists("anArrayOfUUIDs")) {
             "an array of UUIDs",
             new CallbackMatcher(
                 function (array $array) {
+                    
+                    if (empty($array)) {
+                        return false;
+                    }
+                    
                     foreach ($array as $value) {
                         Assertion::uuid($value);
                     }
