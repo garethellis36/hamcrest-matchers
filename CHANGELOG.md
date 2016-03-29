@@ -1,3 +1,5 @@
+# 0.5 [2016-03-29]
+  * Valid JSON matcher (`validJSON()`)
 # 0.4 [2016-03-23]
   * Bug fix: `ArrayValuesMatcher` previously threw `InvalidArgumentException` if you tried to use it with a 
   non-array-like structure. Now it will just fail the match instead.

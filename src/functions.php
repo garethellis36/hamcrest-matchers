@@ -5,6 +5,7 @@ use Assert\InvalidArgumentException;
 use Garethellis\HamcrestMatchers\Matcher\ArrayValuesMatcher;
 use Garethellis\HamcrestMatchers\Matcher\HtmlMatcher;
 use Garethellis\HamcrestMatchers\Matcher\UuidMatcher;
+use Garethellis\HamcrestMatchers\Matcher\ValidJSONMatcher;
 
 if (!function_exists("aUUID")) {
     function aUUID()
@@ -50,5 +51,12 @@ if (!function_exists("hasEqualValuesTo")) {
     function hasEqualValuesTo($array)
     {
         return new ArrayValuesMatcher($array);
+    }
+}
+
+if (!function_exists("validJSON")) {
+    function validJSON()
+    {
+        return new ValidJSONMatcher();
     }
 }

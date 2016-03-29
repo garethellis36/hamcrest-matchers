@@ -11,7 +11,7 @@ Install with composer:
 
 ## Matchers
 
-### UUIDMatcher
+### UUID matcher
 
 Matches a valid [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier). Example usage:
 ```php
@@ -30,13 +30,22 @@ assertThat([$uuid1, $uuid2, $uuid3], is(anArrayOfUUIDs()));
 This matcher uses the callback matcher (see below) from 
 [Nils Luxton](https://github.com/ascii-soup/hamcrest-callback-matcher).
 
-### HTMLMatcher
+### HTML matcher
 
 Matches a string containing HTML. Example usage;
 ```php
 <?php
 /** ... **/
 assertThat($html, containsHTML());
+```
+
+### Valid JSON matcher
+
+Matches a valid JSON string. Example usage:
+```php
+<?php
+/** .. **/
+assertThat($json, is(validJSON()));
 ```
 
 ### Array values matcher
