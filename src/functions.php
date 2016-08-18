@@ -4,6 +4,7 @@ use Assert\Assertion;
 use Assert\InvalidArgumentException;
 use Garethellis\HamcrestMatchers\Matcher\ArrayValuesMatcher;
 use Garethellis\HamcrestMatchers\Matcher\HtmlMatcher;
+use Garethellis\HamcrestMatchers\Matcher\IsEqualIgnoringLineEndings;
 use Garethellis\HamcrestMatchers\Matcher\UuidMatcher;
 use Garethellis\HamcrestMatchers\Matcher\ValidJSONMatcher;
 
@@ -58,5 +59,12 @@ if (!function_exists("validJSON")) {
     function validJSON()
     {
         return new ValidJSONMatcher();
+    }
+}
+
+if (!function_exists("equalToIgnoringLineEndings")) {
+    function equalToIgnoringLineEndings($value)
+    {
+        return new IsEqualIgnoringLineEndings($value);
     }
 }

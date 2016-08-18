@@ -1,3 +1,9 @@
+# 2.1 [2016-08-18]
+  * Adds EqualToIgnoringLineEndings matcher ('equalToIgnoringLineEndings()')
+
+# 2.0 
+  * Updates Hamcrest to 2.0
+  
 # 0.5 [2016-03-29]
   * Valid JSON matcher (`validJSON()`)
 # 0.4 [2016-03-23]
