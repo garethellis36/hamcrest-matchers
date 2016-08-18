@@ -26,7 +26,7 @@ class IsEqualIgnoringLineEndings extends BaseMatcher
 
     public function describeTo(Description $description)
     {
-
+        $description->appendValue($this->value);
     }
 
     private function convertLineEndingsToLinuxStyle($string)
