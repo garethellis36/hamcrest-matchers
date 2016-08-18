@@ -16,12 +16,12 @@ class IsEqualIgnoringLineEndings extends BaseMatcher
      */
     public function __construct($value)
     {
-        $this->value = $value;
+        $this->value = $this->convertLineEndingsToLinuxStyle($value);
     }
 
     public function matches($item)
     {
-        return $this->convertLineEndingsToLinuxStyle($item) == $this->convertLineEndingsToLinuxStyle($this->value);
+        return $this->convertLineEndingsToLinuxStyle($item) == trim($this->value);
     }
 
     public function describeTo(Description $description)
@@ -35,6 +35,9 @@ class IsEqualIgnoringLineEndings extends BaseMatcher
         $string = str_replace("\r\n", "\r", $string);
 
         //replace mac-style with linux
-        return str_replace("\r", "\n", $string);
+        $string = str_replace("\r", "\n", $string);
+
+        //replace all the things
+        return trim(str_replace(PHP_EOL, "\n", $string));
     }
 }
