@@ -3,7 +3,6 @@
 namespace Garethellis\HamcrestMatchers\Matcher;
 
 use Hamcrest\BaseMatcher;
-use Hamcrest\Core\IsEqual;
 use Hamcrest\Description;
 
 class IsEqualIgnoringLineEndings extends BaseMatcher

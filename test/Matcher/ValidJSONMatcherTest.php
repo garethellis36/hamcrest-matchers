@@ -11,10 +11,10 @@ class ValidJSONMatcherTest extends \PHPUnit_Framework_TestCase
 
         $array = [
             "foo" => "\xB1\x31",
-            "baz" => "bat"
+            "baz" => "bat",
         ];
         assertThat(json_encode($array), is(not(validJSON())));
-        
+
         assertThat("A random string in HTML tags", is(not(validJSON())));
     }
 }

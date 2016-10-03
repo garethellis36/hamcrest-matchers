@@ -18,12 +18,12 @@ class UuidMatcherTest extends \PHPUnit_Framework_TestCase
         $faker = Factory::create();
         assertThat([$faker->uuid, $faker->uuid, $faker->uuid], is(anArrayOfUUIDs()));
     }
-    
+
     public function testArrayOfUuidMatcherDoesntMatchAnEmptyArray()
     {
         assertThat([], is(not(anArrayOfUUIDs())));
     }
-    
+
     public function testArrayOfUuidMatcherShouldThrowAHamcrestExceptionIfMatcherFails()
     {
         $this->expectException(AssertionError::class);

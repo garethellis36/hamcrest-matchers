@@ -30,11 +30,11 @@ if (!function_exists("anArrayOfUUIDs")) {
             "an array of UUIDs",
             new CallbackMatcher(
                 function (array $array) {
-                    
+
                     if (empty($array)) {
                         return false;
                     }
-                    
+
                     foreach ($array as $value) {
                         try {
                             Assertion::uuid($value);
@@ -71,7 +71,8 @@ if (!function_exists("equalToIgnoringLineEndings")) {
 }
 
 if (!function_exists("containsOnlyValuesFrom")) {
-    function containsOnlyValuesFrom($iterable) {
+    function containsOnlyValuesFrom($iterable)
+    {
         return new ContainsOnlyValuesFromMatcher($iterable);
     }
 }
