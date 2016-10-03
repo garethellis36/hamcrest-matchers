@@ -3,6 +3,7 @@ use AsciiSoup\Hamcrest\CallbackMatcher;
 use Assert\Assertion;
 use Assert\InvalidArgumentException;
 use Garethellis\HamcrestMatchers\Matcher\ArrayValuesMatcher;
+use Garethellis\HamcrestMatchers\Matcher\ContainsOnlyValuesFromMatcher;
 use Garethellis\HamcrestMatchers\Matcher\HtmlMatcher;
 use Garethellis\HamcrestMatchers\Matcher\IsEqualIgnoringLineEndings;
 use Garethellis\HamcrestMatchers\Matcher\UuidMatcher;
@@ -66,5 +67,11 @@ if (!function_exists("equalToIgnoringLineEndings")) {
     function equalToIgnoringLineEndings($value)
     {
         return new IsEqualIgnoringLineEndings($value);
+    }
+}
+
+if (!function_exists("containsOnlyValuesFrom")) {
+    function containsOnlyValuesFrom($iterable) {
+        return new ContainsOnlyValuesFromMatcher($iterable);
     }
 }

@@ -1,3 +1,6 @@
+# 2.2 [2016-10-03]
+  * Adds containsOnlyInAnyOrder matcher
+
 # 2.1 [2016-08-18]
   * Adds EqualToIgnoringLineEndings matcher ('equalToIgnoringLineEndings()')
 
