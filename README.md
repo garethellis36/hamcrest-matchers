@@ -7,7 +7,7 @@ A simple collection of custom Hamcrest matchers for use with `hamcrest/hamcrest-
 
 Install with composer:
 
-`composer require garethellis/hamcrest-matchers`
+`composer require --dev garethellis/hamcrest-matchers`
 
 ## Matchers
 
