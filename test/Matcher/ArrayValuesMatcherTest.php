@@ -2,7 +2,9 @@
 
 namespace Garethellis\HamcrestMatchers\Test\Matcher;
 
-class ArrayValuesMatcherTest extends \PHPUnit_Framework_TestCase
+use Garethellis\HamcrestMatchers\Test\TestCase;
+
+class ArrayValuesMatcherTest extends TestCase
 {
     public function testArrayValuesMatcherWithAnArray()
     {

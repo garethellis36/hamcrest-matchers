@@ -1,3 +1,8 @@
+# 3.0 [2021-02-26]
+  * Removes `beberlei/assert` from composer dependencies
+  * Upgrades testing dependencies for PHPUnit 9
+  * Drops support for PHP versions below 7.3 and adds support for up to 8.0
+
 # 2.2 [2016-10-03]
   * Adds containsOnlyInAnyOrder matcher
 

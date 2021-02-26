@@ -2,7 +2,9 @@
 
 namespace Garethellis\HamcrestMatchers\Test\Matcher;
 
-class ValidJSONMatcherTest extends \PHPUnit_Framework_TestCase
+use Garethellis\HamcrestMatchers\Test\TestCase;
+
+class ValidJSONMatcherTest extends TestCase
 {
     public function testValidJsonMatcher()
     {

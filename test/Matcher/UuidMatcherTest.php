@@ -3,9 +3,10 @@
 namespace Garethellis\HamcrestMatchers\Test\Matcher;
 
 use Faker\Factory;
+use Garethellis\HamcrestMatchers\Test\TestCase;
 use Hamcrest\AssertionError;
 
-class UuidMatcherTest extends \PHPUnit_Framework_TestCase
+class UuidMatcherTest extends TestCase
 {
     public function testUuidMatcher()
     {

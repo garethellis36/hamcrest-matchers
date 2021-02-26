@@ -2,9 +2,9 @@
 
 namespace Garethellis\HamcrestMatchers\Test\Matcher;
 
-use PHPUnit_Framework_TestCase;
+use Garethellis\HamcrestMatchers\Test\TestCase;
 
-class IsEqualIgnoringLineEndingsTest extends PHPUnit_Framework_TestCase
+class IsEqualIgnoringLineEndingsTest extends TestCase
 {
     /**
      * @return void

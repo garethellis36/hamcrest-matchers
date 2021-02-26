@@ -2,7 +2,9 @@
 
 namespace Garethellis\HamcrestMatchers\Test\Matcher;
 
-class HtmlMatcherTest extends \PHPUnit_Framework_TestCase
+use Garethellis\HamcrestMatchers\Test\TestCase;
+
+class HtmlMatcherTest extends TestCase
 {
     public function testHtmlMatcherWorks()
     {

@@ -9,19 +9,10 @@
          processIsolation="false"
          stopOnError="false"
          stopOnFailure="false"
-         syntaxCheck="true"
          verbose="true">
     <testsuites>
         <testsuite name="Unit Test Suite">
             <directory suffix="Test.php">./test</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <whitelist addUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">src/</directory>
-        </whitelist>
-    </filter>
-    <listeners>
-        <listener class="\Hamcrest\Adapter\PHPUnit\TestListener"/>
-    </listeners>
 </phpunit>

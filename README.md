@@ -1,13 +1,12 @@
 A simple collection of custom Hamcrest matchers for use with `hamcrest/hamcrest-php`.
 
-[![Build Status](https://travis-ci.org/garethellis36/hamcrest-matchers.svg?branch=master)](https://travis-ci.org/garethellis36/hamcrest-matchers)
 [![Code Climate](https://codeclimate.com/github/garethellis36/hamcrest-matchers/badges/gpa.svg)](https://codeclimate.com/github/garethellis36/hamcrest-matchers)
 
 # Installation
 
 Install with composer:
 
-`composer require garethellis/hamcrest-matchers`
+`composer require --dev garethellis/hamcrest-matchers`
 
 ## Matchers
 

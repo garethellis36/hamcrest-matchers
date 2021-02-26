@@ -2,9 +2,9 @@
 
 namespace Garethellis\HamcrestMatchers\Test\Matcher;
 
-use PHPUnit_Framework_TestCase;
+use Garethellis\HamcrestMatchers\Test\TestCase;
 
-class ContainsOnlyValuesFromMatcherTest extends PHPUnit_Framework_TestCase
+class ContainsOnlyValuesFromMatcherTest extends TestCase
 {
     /**
      * @return void
