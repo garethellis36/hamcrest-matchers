@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5113c37cb254915bb4ee157d12b50915",
+    "content-hash": "5b01fd2bae84b852246d016173232000",
     "packages": [
         {
             "name": "ascii-soup/hamcrest-callback-matcher",
@@ -2262,8 +2262,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "7.3.* || 7.4.* || 8.0.* || 8.1.*"
+        "php": "8.1.* || 8.2.* || 8.3.*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }
